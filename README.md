@@ -1,34 +1,31 @@
 # Full Stack Developer Assignment - Backend
 
-This repository contains the backend implementation for the Full Stack Developer Assignment. The backend is built using [NestJS](https://nestjs.com/), [Prisma ORM](https://www.prisma.io/), and PostgreSQL. It provides a secure authentication API with endpoints for user registration, login, and fetching authenticated user details.
+This repository contains the backend implementation for the Full Stack Developer Assignment. The backend is built with [NestJS](https://nestjs.com/), uses [Prisma ORM](https://www.prisma.io/) to interact with a PostgreSQL database, and implements JWT-based authentication.
 
 ## Features
 
-- **Authentication API:**
-  - `POST /auth/register`: Register a new user.
-  - `POST /auth/login`: Authenticate and return a JWT token.
-  - `GET /auth/me`: Retrieve user details (protected route).
-- **Data Validation:**
-  - Utilizes DTOs with [class-validator](https://github.com/typestack/class-validator) for request validation.
-- **Database:**
-  - PostgreSQL as the database.
-  - Prisma ORM for database access and migrations.
-- **Security:**
-  - JWT-based authentication to secure protected routes.
-- **Documentation:**
-  - API documentation available via Swagger.
+- **User Authentication API**
+  - **Register** (`POST /auth/register`): Register a new user with the fields _fullName_, _email_, _category_, _contact_, and _password_.
+  - **Login** (`POST /auth/login`): Authenticate an existing user and return a JWT token.
+  - **Profile** (`GET /auth/me`): Fetch the authenticated user’s details (protected route).
+- **Validation**
+  - Uses Data Transfer Objects (DTOs) with [class-validator](https://github.com/typestack/class-validator) for request validation.
+- **API Documentation**
+  - Swagger documentation is available for easy testing and integration.
+- **Security**
+  - JWT-based authentication for protecting endpoints.
 
 ## Prerequisites
 
-- **Node.js** (v14 or above)
+- **Node.js** (v14 or higher)
 - **npm** or **yarn**
 - **PostgreSQL** installed locally
 
-## Setup Instructions
+## Installation
 
-### 1. Clone the Repository
+1. **Clone the Repository**
 
-```bash
-git clone https://github.com/mitkapadiya23/auth-backend.git
-cd auth-backend
-```
+   ```bash
+   git clone https://github.com/mitkapadiya23/auth-backend.git
+   cd auth-backend
+   ```
