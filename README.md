@@ -5,7 +5,7 @@ This repository contains the backend implementation for the Full Stack Developer
 ## Features
 
 - **User Authentication API**
-  - **Register** (`POST /auth/register`): Register a new user with the fields _fullName_, _email_, _category_, _contact_, and _password_.
+  - **Register** (`POST /auth/register`): Register a new user with the fields _username_, _email_, _category_, _contact_, and _password_.
   - **Login** (`POST /auth/login`): Authenticate an existing user and return a JWT token.
   - **Profile** (`GET /auth/me`): Fetch the authenticated user’s details (protected route).
 - **Validation**

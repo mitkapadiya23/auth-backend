@@ -3,11 +3,11 @@ import { IsNotEmpty, IsEmail, MinLength } from 'class-validator';
 
 export class RegistrationDto {
   @ApiProperty({
-    example: 'John Doe',
-    description: 'The full name of the user',
+    example: 'JohnDoe',
+    description: 'The username of the user',
   })
-  @IsNotEmpty({ message: 'Fullname is required' })
-  fullName: string;
+  @IsNotEmpty({ message: 'Username is required' })
+  userName: string;
 
   @ApiProperty({
     example: 'john.doe@example.com',

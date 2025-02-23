@@ -15,7 +15,7 @@ export class UsersService {
     const hashedPassword = await bcrypt.hash(registrationDto.password, 10);
     return this.prisma.user.create({
       data: {
-        fullName: registrationDto.fullName,
+        userName: registrationDto.userName,
         email: registrationDto.email,
         category: registrationDto.category,
         contact: registrationDto.contact,
